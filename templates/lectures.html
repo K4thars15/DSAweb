@@ -1,5 +1,22 @@
 {% extends "base.html" %}
+
+<!-- Pang override ng original style ng button para mapalitan nung nilagay ko -->
+{% block styles %}
+  <style>
+    #btn-create-post {
+      background-color: #026ffd; color: white; padding: 10px 20px;
+      border: none; border-radius: 8px; cursor: pointer;
+      font-size: 16px;
+    }
+
+    #btn-create-post:hover {
+      transform: translateY(-1px); background-color: #0056b3; transition: transform 0.8s ease,
+    } 
+  </style>
+{% endblock styles %}
+
 {% block title %}Lectures | DSAWebLectures{% endblock %}
+
 {% block content %}
 <main class="lectures-page">
   <section class="lectures-header">
@@ -69,7 +86,8 @@
       <textarea name="caption" id="post-caption" required></textarea>
 
       <label for="post-file">Attachment (optional):</label>
-      <input type="file" name="file" id="post-file" />
+      <input type="file" name="file" id="post-file" class="input-file"/> <!-- tinago ko ung original input area para malagyan css -->
+      <label for="post-file" id="button">Choose File</label> <!-- section changed, sineparate ko para malagyan css -->
 
       <label for="post-author">Author:</label>
       <input type="text" name="author" id="post-author" required />
