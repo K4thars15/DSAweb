@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}DSAWebLectures{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  {% block styles %}
+  {% endblock styles %} <!-- style block kse need ko i edit ung buttons para sa lectures -->
 </head>
 <body>
   <!-- === NAVBAR === -->
