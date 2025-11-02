@@ -26,6 +26,7 @@ body{
   font-size:16px;
   padding-top:72px; /* reserve space for fixed navbar */
 }
+
 /*   Utilities  */
 .hidden{display:none!important}
 .sr-only{
@@ -57,6 +58,28 @@ body{
   background:transparent;
   border:1px solid rgba(255,255,255,0.04);
 }
+
+/*   Custom scrollbar design  */
+::-webkit-scrollbar {
+      width: 10px; 
+      height: 10px; 
+    }
+
+::-webkit-scrollbar-track {
+      background: #0f1724; 
+      border-radius: 5px;
+    }
+
+::-webkit-scrollbar-thumb {
+      background-color: #555555; 
+      border-radius: 5px; 
+      border: 2px solid #0f1724; 
+    }
+
+::-webkit-scrollbar-thumb:hover {
+      background-color: #777; 
+    }
+
 /*   Layout containers  */
 .container{
   max-width:var(--max-width);
@@ -361,6 +384,50 @@ body{
 .post-body p{margin:0 0 .5rem 0;color:var(--muted)}
 .post-media{max-width:100%;border-radius:10px;margin-top:.5rem;display:block}
 
+/* extra shimmy shimmy yay shimmy ya para sa load more, copy github and yada yada */
+#load-more {
+      background-color: #06315f; color: white; padding: 10px 20px;
+      border: none; border-radius: 8px; cursor: pointer;
+      font-size: 16px; transform: translateY(-1px); transition: transform 0.8s ease,
+    }
+
+#button {
+      display: inline-block; padding: 4px 4px; background-color: #026ffd;
+      border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;
+      margin-top: 5px; width: fit-content; color: white;
+    }
+
+#button:hover {
+      transform: translateY(-1px); background-color: #0056b3; transition: transform 0.8s ease,
+    }
+
+/* Pantago ng default na design nung input file */
+.input-file {
+      width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden;
+      position: absolute; z-index: -1;
+    }
+
+/* publish and cancel custom buttons */
+#post-publish {
+      display: inline-block; padding: 4px 4px; background-color: #026ffd;
+      border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;
+      margin-top: 5px; width: fit-content; color: white;
+    }
+
+#post-publish:hover {
+      transform: translateY(-1px); background-color: #0056b3; transition: transform 0.8s ease,
+    }
+
+#post-cancel {
+      display: inline-block; padding: 4px 4px; background-color: #026ffd;
+      border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;
+      margin-top: 5px; width: fit-content; color: white;
+    }
+
+#post-cancel:hover {
+      transform: translateY(-1px); background-color: #0056b3; transition: transform 0.8s ease,
+    }
+
 /* footer actions */
 .post-card footer{
   display:flex;align-items:center;gap:.5rem;
@@ -453,6 +520,26 @@ body{
 }
 .collab-btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.45)}
 .collab-card .avatar{width:88px;height:88px;border-radius:10px;object-fit:cover}
+
+.copy-btn {
+      display: inline-block; padding: 4px 4px; background-color: #026ffd;
+      border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;
+      margin-top: 5px; width: fit-content; color: white;
+}
+
+.copy-btn:hover {
+      transform: translateY(-1px); background-color: #0056b3; transition: transform 0.8s ease,
+}
+
+.close-btn {
+      display: inline-block; padding: 4px 4px; background-color: #026ffd;
+      border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;
+      margin-top: 5px; width: fit-content; color: white;
+}
+
+.close-btn:hover {
+      transform: translateY(-1px); background-color: #0056b3; transition: transform 0.8s ease,
+}
 /*   Search suggestions dropdown  */
 .suggestions{
   position:absolute;left:0;right:0;top:calc(100% + 8px);
